@@ -8,21 +8,26 @@
 </head>
 <body>
     <a href="../../.">Home</a>
-    <!-- <div id="gameboard">
-        <div class="cell" id="0"></div>
-        <div class="cell" id="1"></div>
-        <div class="cell" id="2"></div>
-        <div class="cell" id="3"></div>
-        <div class="cell" id="4"></div>
-        <div class="cell" id="5"></div>
-        <div class="cell" id="6"></div>
-        <div class="cell" id="7"></div>
-        <div class="cell" id="8"></div>
-    </div> -->
-
-    <div class="main">
-        <canvas id="gameboard1" ></canvas>
+    <div id="gameContainer">
+        <h1>Tic Tac Toe</h1>
+        <div id="gameboard">
+            <div class="cell" cell_id="0">X</div>
+            <div class="cell" cell_id="1">O</div>
+            <div class="cell" cell_id="2"></div>
+            <div class="cell" cell_id="3"></div>
+            <div class="cell" cell_id="4"></div>
+            <div class="cell" cell_id="5"></div>
+            <div class="cell" cell_id="6"></div>
+            <div class="cell" cell_id="7"></div>
+            <div class="cell" cell_id="8"></div>
+        </div>
+        <h2 id="statusText"></h2>
+        <button id="restartBtn">Restart</button>
     </div>
+        
+    <!-- <div class="main">
+        <canvas id="gameboard1" ></canvas>
+    </div> -->
 
     <script src="script.js"></script>
 </body>
