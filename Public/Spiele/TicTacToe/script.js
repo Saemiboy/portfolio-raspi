@@ -23,11 +23,22 @@ function initialize() {
 };
 
 function restartGame() {
-    // console.log('askdjflsa')
+    grid = [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""],
+    ];
+    running = true;
+    cells.forEach(cell => {
+        cell.textContent = '';
+    })
+    currentPlayer = 'X';
+    statusText.textContent = `${currentPlayer} ist an der Reihe.`;
 };
 
 function drawMove(cell){
     let cell_id = parseInt(cell.getAttribute('cell_id'), 10);
+
     if (grid[Math.floor(cell_id / 3)][cell_id % 3] === '' && running) {
         cell.textContent = currentPlayer;
         grid[Math.floor(cell_id / 3)][cell_id % 3] = currentPlayer;
@@ -35,11 +46,13 @@ function drawMove(cell){
             running = false;
             statusText.textContent = `${currentPlayer} wins`;
             console.log('win');
+        } else if (!checkEmpty()) {
+            statusText.textContent = 'Draw';
+            running = false;
         }
         if (running) {
-
             switchPlayer()
-        }
+        };
     };
 };
 
@@ -96,6 +109,17 @@ function checkRow(row) {
     // console.log(row.every(cell => cell === row[0]) && !row.includes(''), row)
     return row.every(cell => cell === row[0]) && !row.includes('');
 };
+
+function checkEmpty() {
+    for (let i = 0; i<3; i++) {
+        for (let j = 0; j<3; j++) {
+            if (grid[i][j] == '') {
+                return true;
+            };
+        };
+    };
+    return false; 
+}
 
 initialize();
 
