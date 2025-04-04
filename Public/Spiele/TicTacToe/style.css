@@ -60,3 +60,19 @@
     width: 300px;
     margin: auto;
 }
+
+.homebtn {
+    text-decoration: none;
+    color: black;
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+}
+
+#innercontrols {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
