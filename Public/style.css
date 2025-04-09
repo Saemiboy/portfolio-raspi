@@ -1,0 +1,21 @@
+* {
+    font-family: 'Lucida Console', monospace;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    text-align: center;
+}
+
+#joke {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 21.4px;
+}

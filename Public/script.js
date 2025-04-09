@@ -1,6 +1,11 @@
 const jokediv = document.getElementById('joke');
 const newJoke = document.getElementById('newJoke');
 
+document.addEventListener('DOMContentLoaded', () => {
+  // Diese Funktion wird ausgeführt, sobald das HTML fertig geladen ist
+  getJoke();
+});
+
 newJoke.addEventListener('click', () => {
     getJoke()
 })
