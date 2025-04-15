@@ -1,21 +1,75 @@
 * {
     font-family: 'Lucida Console', monospace;
+    margin: 0;
+    --main-font: #2f3e46;
+    --sec-font: #354f52;
+    --color3: #52796f;
+    --sec-bg: #84a98c;
+    --main-bg: #cad2c5;
 }
 
-#container {
+.head {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    background: var(--main-bg);
+    color: var(--main-font);
+    position: sticky;
+    top: 0;
+    
+}
+
+.head a {
+    text-decoration: none;
+    color: var(--sec-font);
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.main {
     display: grid;
-    grid-template-columns: repeat(2, 50vw);
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--sec-bg);
+    height: 100svh;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    gap: 1rem;
+    color: var(--main-font);
+    border: 3px solid var(--color3);
+    border-radius: 20px;
+    height: 20rem;
+    padding: 1rem;
+}
+
+.content a {
+    text-decoration: none;
+    color: var(--sec-font);
 }
 
 #joke {
-    height: 10rem;
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 4rem;
     margin-right: 4rem;
-    border: 2px solid black;
+    border: 2px solid var(--sec-font);
     border-radius: 10px;
-    margin-bottom: 21.4px;
+    padding: 20px;
+    color: var(--sec-font);
 }
