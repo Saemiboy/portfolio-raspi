@@ -20,6 +20,10 @@
     
 }
 
+body {
+    background-color: var(--sec-bg);
+}
+
 .head a {
     text-decoration: none;
     color: var(--sec-font);
@@ -35,11 +39,11 @@
 
 .main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
     padding: 1rem;
     background-color: var(--sec-bg);
-    height: 100svh;
+    /* height: 100dvh; */
 
 }
 
@@ -48,12 +52,14 @@
     flex-direction: column;
     justify-content: top;
     align-items: center;
+    text-align: center;
     gap: 1rem;
     color: var(--main-font);
     border: 3px solid var(--color3);
     border-radius: 20px;
-    height: 20rem;
+    height: fit-content;
     padding: 1rem;
+    background-color: var(--main-bg);
 }
 
 .content a {
@@ -62,12 +68,13 @@
 }
 
 #joke {
-    min-height: auto;
+    height: 100%;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    /* margin-left: 4rem;
+    margin-right: 4rem; */
     border: 2px solid var(--sec-font);
     border-radius: 10px;
     padding: 20px;
